@@ -1,29 +1,62 @@
-# Hello World PhoneGap Application
+# Hello World PhoneGap Application [![bitHound Score][bithound-img]][bithound-url]
 
 > A Hello World application built with PhoneGap
 
-## PhoneGap Build
+## Getting Help with PhoneGap
+
+If you are looking for help with PhoneGap please visit the
+[PhoneGap Forums](https://forums.adobe.com/community/phonegap).
+
+## Usage
+
+### Desktop
+
+In your browser, open the file:
+
+    /www/index.html
+
+### PhoneGap CLI
+
+This repository is automatically downloaded by [phonegap-cli][phonegap-cli-url]
+when you create a new application.
+
+### PhoneGap Build
 
 Create a new app with the following repository:
 
     https://github.com/phonegap/phonegap-start.git
 
-## Run Application
+## Contributors
 
-    /www/index.html
+### Updating the Application
 
-## Run Tests
+The application is based on the [Apache Cordova Hello World][cordova-app] app.
 
-    /www/spec.html
+#### 1. Update the Source
 
-## Issues and Pull Requests
+    cp cordova-app-hello-world/www www/
 
-This application is a modification of the [Apache Cordova Hello World][1].
+**Do not replace `www/config.xml`.**
 
-For issues with __the application__, please submit an issue or pull request
-to the [Apache Cordova source code][1].
+**Do not replace `www/img/logo.png`.**
 
-For issues with __the PhoneGap Build integration__, please submit
-an issue or pull request to this project.
+#### 2. Update index.html
 
-[1]: http://github.com/apache/incubator-cordova-app-hello-world
+Replace `<h1>Apache Cordova</h1>` with `<h1>PhoneGap</h1>`.
+
+#### 3. Update PhoneGap Version
+
+    <preference name="phonegap-version" value="x.x.x" />
+
+#### 4. Commit
+
+    $ git commit -am "Version x.x.x"
+
+#### 5. Tag
+
+    $ git tag x.x.x
+
+[phonegap-cli-url]: http://github.com/phonegap/phonegap-cli
+[cordova-app]: http://github.com/apache/cordova-app-hello-world
+[bithound-img]: https://www.bithound.io/github/phonegap/phonegap-start/badges/score.svg
+[bithound-url]: https://www.bithound.io/github/phonegap/phonegap-start
